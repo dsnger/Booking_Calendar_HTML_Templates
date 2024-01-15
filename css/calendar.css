@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* CSS Document
+
+calendar.css
+v.1.1
+07.03.2017
+based on bootstrap-datepicker3.standalone.css and bootstrap.css
+*/
+*:hover {
+	cursor: pointer;
+}
+#calSection {
+		max-width:900px;
+		min-width: 280px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #333333;
+	border: 1px solid #ddd;
+    margin: 15px auto 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+#calSection.max1000 {
+		min-width: 900px;
+
+}
+
+.calBox {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*
+.datepicker .datepicker-switch {
+    width: 135px;
+}
+*/
+.datepicker-inline {
+    width: 95%;
+	margin: 5px auto;
+	border-radius: 5px;
+	border: #ddd 1px solid;
+	/*box-shadow: 0 1px 3px 0 rgba(0,0,0,.3);*/
+	padding: 5px;
+	background: #fff;
+}
+
+.datepicker table tr td, .datepicker table tr th {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+		position: relative;
+}
+
+.datepicker table {
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+		border-collapse: separate;
+/*	background-color: #eee;*/
+}
+
+.datepicker table tr th {
+	border-radius: 0;
+}
+.datepicker table tr td a {
+	color: #333333;
+}
+
+
+.objectname {
+	white-space: nowrap;
+	text-align: left!important;
+
+}
+td.objectname  {
+	width:140px!important;
+	font-size: 11px!important;
+
+}
+
+
+.overview > .table-condensed th,
+.overview > .table-condensed td {
+    padding: 0;
+		text-align: left;
+		width: 31px;
+		height: 20px;
+		text-align: center;
+}
+.overview > td.objectname {
+    width:170px;
+		font-size: 10px;
+}
+.overview.datepicker-inline {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+.overview.overview-months > .table-condensed td {
+    padding: 0;
+    text-align: left;
+		font-size: 1%;
+		width: 21px;
+		min-width: 21px;
+		height: 21px;
+		text-align: center;
+		position: relative;
+}
+.overview.overview-months > .table-condensed > thead td {
+		font-size: 9px;
+}
+
+.datepicker thead tr:nth-child(2) th {
+	background-color: #eee;
+}
+.datepicker thead tr:nth-child(2) th {
+	color: #333333;
+}
+
+.datepicker table tr:nth-child(2) th:hover {
+	color: #333333;
+}
+
+td.day, td.month {
+    border: 1px white solid!important;
+}
+
+.nav-month {
+	font-size: 18px;
+}
+
+/* day status classes */
+
+
+/* old past days / new future days*/
+.datepicker table tr td.old, .datepicker table tr td.new {
+    color: #eee!important;
+}
+/* highlighted z. b. weekend / holidays */
+.datepicker table tr td.highlighted {
+    color: #000;
+    background-color: #d9edf7;
+    border-color: #85c5e5;
+    border-radius: 0;
+}
+/* disabled days */
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+    background: #B8BFBB;
+    color: 000;
+    cursor: default;
+	border-radius: 0;
+}
+
+/* today */
+.datepicker table tr td.today {
+    color: #000;
+    border-color: #FF7700;
+}
+.datepicker table tr td.today:hover {
+    color: #000;
+    border-color: #FF7700;
+	border-radius: 0;
+}
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today.focus[disabled],
+fieldset[disabled] .datepicker table tr td.today.focus {
+    border-color: #ff7700;
+	  border-radius: 0;
+}
+
+
+/* occupied */
+.datepicker table tr td.occupied {
+   background-color: #E2375A;
+   color:#000;
+	border-radius: 0;
+}
+.datepicker table tr td.occupied a,
+.datepicker table tr td.available a,
+
+.datepicker table tr td.half-occupied a,
+.datepicker table tr td.half-available a {
+	color:#000;
+}
+.datepicker table tr td.month-occupied {
+   background-color: #E2375A;
+   color:#000;
+	border-radius: 0;
+}
+
+.datepicker table tr td.occupied.month-half-occupied,
+.datepicker table tr td.occupied.month-less-occupied {
+  position:relative;
+  color: 000;
+	z-index: 1;
+}
+.datepicker table tr td.occupied.month-half-occupied::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.3);
+	display: block;
+	 z-index:-1;
+	}
+	.datepicker table tr td.occupied.month-less-occupied::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		background: rgba(255,255,255,0.6);
+		z-index:-1;
+		}
+
+/*.datepicker table tr td.occupied.month-half-occupied {
+	filter: alpha(opacity=60);
+	filter: progid: DXImageTransform.Microsoft.Alpha(opacity=30);
+	-moz-opacity: 0.60;
+	opacity: 0.6;
+}*/
+/*.datepicker table tr td.occupied.month-less-occupied {
+	filter: alpha(opacity=30);
+	filter: progid: DXImageTransform.Microsoft.Alpha(opacity=60);
+ 	-moz-opacity: 0.30;
+ 	opacity: 0.3;
+}*/
+
+
+/* half-occupied */
+.datepicker table tr td.half-occupied {
+	background: #e2375a; /* Old browsers */ /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #e2375a 0%,#e2375a 50%,#2cd47a 50%,#2cd47a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -webkit-linear-gradient(315deg,  #e2375a 0%,#e2375a 50%,#2cd47a 50%,#2cd47a 100%);
+	background: linear-gradient(135deg,  #e2375a 0%,#e2375a 50%,#2cd47a 50%,#2cd47a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startcolorstr='#e2375a', endcolorstr='#2cd47a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color:#000;
+	border-radius: 0;
+}
+
+/* half available */
+.datepicker table tr td.half-available {
+  	background: #2cd47a; /* Old browsers */ /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #2cd47a 0%,#2cd47a 50%,#e2375a 50%,#e2375a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -webkit-linear-gradient(315deg,  #2cd47a 0%,#2cd47a 50%,#e2375a 50%,#e2375a 100%);
+	background: linear-gradient(135deg,  #2cd47a 0%,#2cd47a 50%,#e2375a 50%,#e2375a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startcolorstr='#2cd47a', endcolorstr='#e2375a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color:#000;
+	border-radius: 0;
+}
+
+/* changeday */
+.datepicker table tr td.changeday {
+		color:#000;
+		border-radius: 0;
+		background: #e2375a; /* Old browsers */ /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #e2375a 1%,#e2375a 35%,#2cd47a 35%,#2cd47a 35%,#2cd47a 70%,#e2375a 70%,#e2375a 100%); /* Chrome10-25,Safari5.1-6 */
+		background: -webkit-linear-gradient(315deg, #e2375a 1%,#e2375a 35%,#2cd47a 35%,#2cd47a 35%,#2cd47a 70%,#e2375a 70%,#e2375a 100%);
+		background: linear-gradient(135deg, #e2375a 1%,#e2375a 35%,#2cd47a 35%,#2cd47a 35%,#2cd47a 70%,#e2375a 70%,#e2375a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startcolorstr='#e2375a', endcolorstr='#e2375a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* available */
+.datepicker table tr td.available,
+.datepicker table tr td.day:not(.new,.disabled,.reserved,.old,.changeday,.half-available,.half-occupied,.occupied,.month-occupied) {
+   background-color: #2CD47A;
+   color:#000;
+	border-radius: 0;
+}
+/* reserved */
+.datepicker table tr td.reserved {
+   background-color: #F7C553;
+   color:#000;
+	border-radius: 0;
+}
+
+
+/* LEGEND */
+#calLegend {
+	margin: 0 auto;
+	padding: 10px 15px;
+}
+
+.datepicker .legend {
+	cursor: default;
+}
+.legend table tr td {
+	height: 10px;
+	text-align: left;
+	padding: 3px;
+	cursor: default;
+	font-size: 80%;
+}
+.legend table tr td:nth-child(2n-1) {
+  max-width: 5%;
+	padding: 0;
+}
+.legend table tr td:nth-child(2n-1):last-child {
+    width: auto;
+    min-width: 400px;
+	text-align: right;
+}
+.legend table tr td:nth-child(2n) {
+	width: 10%;
+	padding-left: 5px;
+}
+
+
+.legend img {
+	max-width: 200px;
+	width:100%;
+	height: auto;
+}
+.callogo {
+	text-align: center;
+	margin-top: 15px;
+}
+/* Years */
+#calYears h2{
+	margin: 0;
+}
+#calSection hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+#calYears button {
+	margin-top: -5px;
+	margin-left: 10px;
+	padding-right: 25px;
+	padding-left: 25px;
+    background-color: #FF7700;
+    border-color: #FF7700;
+    background-image: -webkit-linear-gradient(top, #ff8800, #FF6000);
+    background-image: linear-gradient(to bottom, #ff8800, #FF6000);
+}
+#calYears button:hover, #calYears button:focus, #calYears button:active, #calYears button.active {
+    color: #ffffff;
+    background-color: #FF7700;
+    border-color: #FF7700;
+    background-image: -webkit-linear-gradient(top, #FF7700, #FF6600);
+    background-image: linear-gradient(to bottom, #FF7700, #FF6600);
+}
+
+
+.datepicker .btn:hover,
+td.day:hover,
+td.day.available:hover,
+td.day.half-available:hover,
+td.day.half-occupied:hover,
+td.day.changeday:hover
+{
+    /*-webkit-transition: scale(1.1,1.1);
+    -moz-transition: scale(1.1,1.1);
+    -ms-transition: scale(1.1,1.1);
+    -o-transition: scale(1.1,1.1);
+    transform: scale(1.1,1.1);*/
+}
+.datepicker .btn::after,
+td.day.available::after,
+td.day.half-available::after,
+td.day.half-occupied::after,
+td.day.changeday::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    -webkit-transition: background 250ms;
+    transition: background 250ms;
+  }
+.datepicker .btn:hover::after,
+
+td.day.available:hover::after,
+td.day.half-available:hover::after,
+td.day.half-occupied:hover::after,
+td.day.changeday:hover::after {
+	background: rgba(0,0,0,0.2);
+	border: 1px solid white;
+}
+
+td.day:hover {
+  background-color: #ddd;
+}
+
+td.day.old:hover,
+td.day.new:hover,
+td.day.occupied,
+td.day.disabled{
+	-webkit-transform: none;
+	        transform: none;
+}
+td.day.old:hover,
+td.day.new:hover{
+	background-color: transparent;
+}
+
+#calYears ul.list-inline {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    vertical-align: middle;
+}
+#calYears > ul > li:first-child {
+	font-size: 24px;
+	font-weight: bold;
+	width: 74%;
+}
+#calYears > ul > li:first-child small{
+	font-size: 14px;
+	font-weight: normal;
+}
+#calYears > ul > li:last-child{
+	width: 30%;
+}
+#calYears .nav{
+	float:right;
+}
+#calYears .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 6px 12px;
+}
+#calYears .nav-month > li.month-of-year{
+	padding: 6px 5px;
+	margin-bottom: -8px;
+}
+#calYears .nav-month > li > a {
+    position: relative;
+    display: block;
+    padding: 6px 6px;
+}
+
+
+
+#calYears .nav-pills > li.active > a,
+#calYears .nav-pills > li.active > a:hover,
+#calYears .nav-pills > li.active > a:focus {
+    color: #ffffff;
+    background-color: #006699;
+}
+
+
+/* Media Screen Views */
+
+@media screen and (max-width: 767px) {
+	#calYears ul.list-inline{
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	#calYears > ul > li:first-child {
+		-webkit-box-flex:1;
+		    -ms-flex:auto;
+		        flex:auto;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	#calYears > ul > li:last-child{
+		-webkit-box-flex:1;
+		    -ms-flex:auto;
+		        flex:auto;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	#calYears ul.nav {
+		display: inline-block;
+    	float: none;
+		 margin: 0 auto;
+	}
+
+}
+@media only (min-width: 768px) and (max-width: 992px) {
+	#calYears > ul > li:first-child {
+		width: 60%;
+	}
+	#calYears > ul > li:last-child{
+		width: 40%;
+	}
+
+}
+@media (max-width: 470px) {
+
+	div[class*="col-xs-"]{
+		width: 100%!important;
+
+	}
+
+
+}

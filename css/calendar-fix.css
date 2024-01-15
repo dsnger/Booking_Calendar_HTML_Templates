@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* CSS Document
+
+calendar-fix.css
+v.1.0
+01.02.2017
+based on bootstrap-datepicker3.standalone.css and bootstrap.css
+
+
+*/
+
+#calSection {
+    width: 600px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.42857143;
+    color: #333333;
+
+    margin: 15px auto 2px auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#calSection.overview {
+    width: 600px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.42857143;
+    color: #333333;
+    border: 1px solid #ddd;
+    margin: 15px auto 2px auto;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+#calYears>ul>li:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    width: 64%;
+}
+
+#calYears>ul>li:last-child {
+    width: 35%;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#calYears button {
+    font-size: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+.legend table tr td:nth-child(2n-1) {
+    min-width: 2%;
+    max-width: 2%;
+    padding: 0 8px;
+}
+
+.legend img {
+    width: 150px;
+    height: auto;
+}
+
+.legend table tr td:nth-child(2n-1):last-child {
+    width: auto;
+    min-width: 250px;
+    text-align: right;
+}
+
+.datepicker-inline {
+    width: 98%;
+    /*margin: 2px auto 10px auto;*/
+    border-radius: 3px;
+    border: none;
+    padding: 0;
+}
+
+.datepicker table tr th,
+.datepicker table tr td {
+    border-radius: 0;
+    border: none;
+    width: 15px;
+    height: 15px;
+}
+
+.table-condensed>thead>tr>th,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>tbody>tr>td,
+.table-condensed>tfoot>tr>td {
+    padding: 2px;
+}
+
+.datepicker table {
+    border-collapse: separate;
+    border-spacing: 0;
+
+}
+
+.calBox {
+    padding-left: 1px;
+    padding-right: 1px;
+}
